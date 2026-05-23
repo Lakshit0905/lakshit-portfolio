@@ -69,38 +69,38 @@ export function Navbar() {
             </span>
           </motion.a>
 
-          {/* Desktop nav */}
-          <nav className="hidden items-center gap-1 md:flex">
-            {siteConfig.navLinks.map((link) => {
-              const id = link.href.replace("#", "");
-              const isActive = activeSection === id;
-              return (
-                <button
-                  key={link.href}
-                  onClick={() => handleNavClick(link.href)}
-                  className={cn(
-                    "relative rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                    isActive
-                      ? "text-white"
-                      : "text-zinc-400 hover:text-zinc-200"
-                  )}
-                >
-                  {isActive && (
-                    <motion.span
-                      layoutId="activeNav"
-                      className="absolute inset-0 rounded-md bg-white/8"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    />
-                  )}
-                  <span className="relative z-10">{link.label}</span>
-                </button>
-              );
-            })}
-          </nav>
+          <div className="hidden items-center gap-3 md:flex">
+            {/* Desktop nav */}
+            <nav className="flex items-center gap-1">
+              {siteConfig.navLinks.map((link) => {
+                const id = link.href.replace("#", "");
+                const isActive = activeSection === id;
+                return (
+                  <button
+                    key={link.href}
+                    onClick={() => handleNavClick(link.href)}
+                    className={cn(
+                      "relative rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                      isActive
+                        ? "text-white"
+                        : "text-zinc-400 hover:text-zinc-200"
+                    )}
+                  >
+                    {isActive && (
+                      <motion.span
+                        layoutId="activeNav"
+                        className="absolute inset-0 rounded-md bg-white/8"
+                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      />
+                    )}
+                    <span className="relative z-10">{link.label}</span>
+                  </button>
+                );
+              })}
+            </nav>
 
-          {/* Resume CTA */}
-          {siteConfig.resumeUrl && (
-            <div className="hidden items-center gap-3 md:flex">
+            {/* Resume CTA */}
+            {siteConfig.resumeUrl && (
               <a
                 href={siteConfig.resumeUrl}
                 download
@@ -109,8 +109,8 @@ export function Navbar() {
                 <Download size={14} />
                 Resume
               </a>
-            </div>
-          )}
+            )}
+          </div>
 
           {/* Mobile toggle */}
           <button
