@@ -1,0 +1,33 @@
+export const siteConfig = {
+  name: "Lakshit Rajput",
+  initials: "LR",
+  title: "Senior SDET",
+  tagline: "Building quality systems that ship at scale",
+  description:
+    "Senior SDET with 8 years architecting test infrastructure for distributed systems at Google, Amazon, and Datadog. Playwright · Selenium · k6 · AI-powered defect detection.",
+  email: "rajput.lakshit0905@gmail.com",
+  linkedin: "https://www.linkedin.com/in/lakshitrajput/",
+  github: "https://github.com/Lakshit0905",
+  medium: "https://medium.com/@lakshit.rajput905",
+  location: "Dallas TX",
+  availability: "Open to Senior SDET · Staff QE · QE Architect roles",
+  url: "https://arjunsharma.dev",
+  photoUrl: "/laks.jpg",
+  resumeUrl: "/resume.pdf",
+  roles: ["Senior SDET", "QE Architect", "Automation Engineer", "Quality Engineer"],
+  stats: [
+    { value: "73", suffix: "%", label: "Fewer prod incidents" },
+    { value: "12", suffix: "x", label: "Faster test execution" },
+    { value: "94", suffix: "%", label: "Automation coverage" },
+    { value: "8", suffix: "yr", label: "Industry experience" },
+  ],
+  previousCompanies: ["Servicelink", "Accenture"],
+  navLinks: [
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Articles", href: "#articles" },
+    { label: "Contact", href: "#contact" },
+  ],
+};
