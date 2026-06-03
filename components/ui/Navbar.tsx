@@ -64,8 +64,7 @@ export function Navbar() {
               {siteConfig.initials}
             </div>
             <span className="hidden font-semibold tracking-tight sm:block">
-              {siteConfig.name.split(" ")[0]}
-              <span className="text-indigo-400">.</span>
+              {siteConfig.name}
             </span>
           </motion.a>
 
