@@ -12,7 +12,7 @@ export const siteConfig = {
   location: "Dallas TX",
   availability: "Open to Senior SDET · Staff QE · QE Architect roles",
   url: "https://lakshit-portfolio-eta.vercel.app/",
-  photoUrl: "/laks.jpg",
+  photoUrl: "/laks.JPEG",
   resumeUrl: "/resume.pdf",
   roles: ["Senior SDET", "QE Architect", "Automation Engineer", "Quality Engineer"],
   stats: [
