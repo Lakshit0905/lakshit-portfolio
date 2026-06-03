@@ -5,7 +5,6 @@ import { About } from "@/components/sections/About";
 import { Experience } from "@/components/sections/Experience";
 import { Skills } from "@/components/sections/Skills";
 import { Projects } from "@/components/sections/Projects";
-import { Articles } from "@/components/sections/Articles";
 import { Contact } from "@/components/sections/Contact";
 
 const Divider = () => (
@@ -46,11 +45,6 @@ export default function HomePage() {
         <div className="bg-[#0d0e18]">
           <Projects />
         </div>
-
-        <Divider />
-
-        {/* Articles — default bg */}
-        <Articles />
 
         <Divider />
 
