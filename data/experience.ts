@@ -12,22 +12,25 @@ export const experiences: Experience[] = [
     description:
       "Architected enterprise-grade QA automation ecosystem for large-scale web and API platforms, modernizing CI/CD quality engineering practices and enabling high-velocity releases across Agile squads.",
     achievements: [
-      "Architected Enterprise QA Automation Platform: Replaced a legacy Cypress framework with a scalable Playwright + TypeScript test ecosystem, enabling 3,000+ automated web/API test flows, reducing flaky failures from 22% to under 2%, and accelerating regression cycles by 65% through CI/CD-driven quality engineering.",
-      "Engineered Intelligent CI/CD Quality Gates: Implemented GitHub Actions-based pipelines with Dockerized execution environments and distributed Playwright test sharding, reducing pipeline execution time from 3.5 hours to under 50 minutes while improving test stability and deployment confidence across Agile release cycles.",
-      "Built Robust API Automation Layer: Designed REST Assured / Playwright-based API testing framework with SQL validation and contract testing, improving backend defect detection rate and enabling early shift-left validation across microservices-based architecture.",
-      "Designed Decentralized Quality Engineering Model: Standardized SDET guardrails across 6 cross-functional Agile squads, accelerating feature delivery velocity by 20% and mitigating regression risks by 15% through upstream defect detection.",
-      "Scaled High-Velocity QA Automation Ecosystem: Spearheaded integration of AI failure analysis and test generation into CI/CD pipelines, optimizing 3,000+ test cases, reclaiming 40% manual triage effort and driving a 35% gain in signal accuracy."
+      "Architected a scalable Playwright + TypeScript automation framework: Automated 450+ UI and API regression scenarios, reduced flaky test failures from nearly 12% to below 4% by introducing retry-aware reporting, stable locator strategies, and isolated test state all monitored through Allure dashboards across sprints deployments.", 
+      "Optimized CI/CD Automation Execution: Implemented GitHub Actions pipelines with Dockerized Playwright runs and parallel execution, reducing regression runtime from 3.5 hours to under 1 hour across sprint deployments.",
+      "Built Robust API Automation Layer: Tested 200+ endpoints across 12 microservices using Playwright’s API client, adding Pact contract tests and SQL data validation to catch 30% of backend defects left before they reached manual QA.",
+      "Provisioned reliable test infrastructure: Ran scheduled Playwright suites on auto-provisioned AWS EC2 environments with seeded data, giving each sprint a consistent baseline and cutting environment-related false failures by 10%",
+      "Streamlined defect reporting: Built a TypeScript utility that parsed CI failures,auto-filed Jira tickets with logs,screenshots, and routed to owners based on recent code changes ,cutting defect-reporting time from 20 minutes to under 3"
     ],
     techStack: [
       "Playwright",
       "TypeScript",
+      "SQL",
       "GitHub Actions",
       "Docker",
-      "REST Assured",
-      "SQL",
+      "Parallel test execution",
+      "AWS(EC2)",
+      "Allure",
+      "Playwright API client",
       "CI/CD",
       "Microservices",
-      "Java"
+      
     ],
   },
   {
@@ -40,19 +43,17 @@ export const experiences: Experience[] = [
     description:
       "Built and scaled automated QA systems for enterprise transaction platforms handling high-volume financial workflows, improving regression efficiency and release reliability.",
     achievements: [
-      "Rebuilt End-to-End Test Automation: Replaced manual testing with an automated UI framework for a platform handling 500K+ monthly transactions, cutting manual QA effort by 80% and saving 320 engineering hours every month.",
-      "Built Automated API Test Suite: Designed a modular testing system for 140+ REST endpoints, reaching 94% coverage and ensuring every code merge is automatically checked for bugs.",
-      "Streamlined Release and Compliance Workflows: Implemented a BDD framework with clear documentation, enabling instant validation by product and compliance teams and cutting a 2-week release bottleneck.",
-      "Led Data Migration Testing Strategy: Managed validation of data migration across 3 legacy systems into a unified database, writing 200+ validation scripts to prevent data loss and schema inconsistencies."
+      "Rebuilt Mortgage Test Automation: Replaced manual testing with a Pytest-based UI automation framework for a mortgage web application, automating 40+ regression scenarios and reducing manual QA effort by 60% per sprint.",
+      "Created Automated API Validation Suite: Implemented Postman-based API automation for a mortgage application, covering 50+ APIs, improving backend validation coverage,reducing manual API testing effort by 55% across releases.", 
     ],
     techStack: [
+      "Python",
+      "Pytest",
       "Selenium",
-      "Java",
-      "REST Assured",
-      "BDD",
-      "Cucumber",
-      "SQL",
-      "Jenkins"
+      "Postman",
+      "UI regression automation",
+      "API validation/automation",
+      "shift-left QA"
     ],
   },
   {
@@ -65,10 +66,9 @@ export const experiences: Experience[] = [
     description:
       "Developed foundational automation frameworks and performance testing systems for enterprise QA modernization initiatives.",
     achievements: [
-      "Designed Java/Selenium/TestNG/Maven automation framework from scratch using Page Object Model and data-driven patterns, eliminating 2+ hours of daily manual regression and achieving 78% automation coverage within 6 months.",
-      "Optimized Jenkins CI/CD pipelines for parallel execution across 4 agents, reducing deployment validation time by 30% and accelerating release cadence from bi-weekly to weekly.",
-      "Built iOS mobile automation suite using Appium with dynamic locators and XCUITest integration, increasing mobile regression coverage by 60% and reducing escape defects.",
-      "Conducted JMeter and LoadRunner performance testing for APIs under 5,000 concurrent users, identifying critical bottlenecks and preventing an estimated 40% revenue impact."
+      "Automated 120+ regression test cases using Java, Selenium WebDriver, TestNG, and Maven, reducing manual testing effort by 45% across sprint release cycles and improving test execution consistency",
+      "Built iOS mobile test suite using Appium with dynamic element locators and XCUITest integration; increased mobile regression coverage by 60% and reduced escape defect rate for mobile releases.",
+      "Executed JMeter performance benchmarks simulating 5,000 concurrent users; identified 2 critical bottlenecks causing response time degradation under peak load, resolved by engineering team pre-launch.",
     ],
     techStack: [
       "Java",
@@ -91,21 +91,21 @@ export const experiences: Experience[] = [
     description:
       "Worked on large-scale banking and payments systems, building automation frameworks, performance testing pipelines, and data validation systems.",
     achievements: [
-      "Built and scaled Cucumber/Gherkin BDD framework automating 1,000+ regression test cases for a Barclays payment platform, saving 148 engineer-hours per release cycle and reducing testing cycle by 2 days; awarded Accenture Excellence in Software Testing Award.",
-      "Optimized 350+ SQL queries for automated data validation across DB2 and SQL Server, converting manual verification workflows into automated pipelines.",
+      "Built and scaled a Cucumber/Gherkin BDD framework that automated 1,000+ regression test cases across a Barclays payment platform; saved 148 engineer-hours per monthly release cycle and shortened sprint testing lifecycle by 2 days — recognized with Accenture Excellence in Software Testing Award (Q1 2019).",
+      "Optimized 350+ complex SQL queries for automated data validation against Mainframe DB2 and SQL Server, converting entirely manual data verification workflows into scheduled automated pipelines.",
       "Designed end-to-end test plans across 5 release phases for high-volume payment processing system, reducing critical bugs in UAT by 20% and production defects from 5 to under 2 per release.",
-      "Improved transaction processing performance from 4 hours to under 100 seconds (99.6% reduction) using targeted load testing and bottleneck analysis with HP-QC.",
-      "Led automation training sessions for 15-member team and received ‘Star of the Month’ twice for delivery excellence and enablement impact."
+      "Executed manual and exploratory testing across functional, regression, and UAT cycles for a banking application, uncovering critical application issues through detailed validation and contributing to a 95% on time release rate.",
+      "dentified and reported 60+ defects across agile sprints in HP QC by documenting clear reproduction steps, environment details, and severity levels, resulting in faster issue resolution and reduced developer follow ups."
     ],
     techStack: [
       "Cucumber",
       "Gherkin",
       "Selenium",
       "Java",
+      "Mainframe DB2,",
       "SQL",
-      "DB2",
       "HP QC",
-      "Performance Testing"
+      "Regression Testing"
     ],
   },
 ];

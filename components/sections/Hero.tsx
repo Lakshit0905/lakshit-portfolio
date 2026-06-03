@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, BookOpen } from "lucide-react";
+import { ArrowRight, Github, Linkedin, BookOpen } from "lucide-react";
 import { siteConfig } from "@/data/site";
+import { ResumeModal } from "@/components/ui/ResumeModal";
 
 const TYPEWRITER_ROLES = ["scale", "velocity", "confidence", "impact"];
 
@@ -37,51 +38,37 @@ export function Hero() {
 
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-16">
-      {/* Ambient background */}
-      <div className="dot-grid absolute inset-0 opacity-60" />
+      {/* Background layers */}
+      <div className="absolute inset-0 bg-[#080910]" />
+      <div className="dot-grid absolute inset-0 opacity-40" />
+      {/* Radial gradient spotlight */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(99,102,241,0.08),transparent)]" />
       <div
         className="ambient-orb"
         style={{
-          width: 400,
-          height: 400,
-          background: "radial-gradient(circle, #6366f1, transparent 70%)",
-          top: "-100px",
-          right: "-100px",
+          width: 500,
+          height: 500,
+          background: "radial-gradient(circle, rgba(99,102,241,0.5), transparent 70%)",
+          top: "-150px",
+          right: "-120px",
           animationDelay: "0s",
         }}
       />
       <div
         className="ambient-orb"
         style={{
-          width: 300,
-          height: 300,
-          background: "radial-gradient(circle, #06b6d4, transparent 70%)",
-          bottom: "10%",
+          width: 320,
+          height: 320,
+          background: "radial-gradient(circle, rgba(56,189,248,0.4), transparent 70%)",
+          bottom: "5%",
           left: "-80px",
           animationDelay: "3s",
         }}
       />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-12 px-4 py-24 sm:px-6 lg:grid-cols-[1.1fr_0.75fr] lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.75fr]">
         <div>
-          {/* Availability badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-8 flex items-center gap-3"
-          >
-            <div className="flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-              </span>
-              <span className="text-xs font-medium text-emerald-400">
-                Available for Senior SDET / QE Architect roles
-              </span>
-            </div>
-          </motion.div>
-
           {/* Label */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -89,33 +76,20 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="mb-5"
           >
-            <span className="section-label">Senior SDET · 8 Years · FAANG-Ready</span>
+            <span className="section-label">Senior SDET | Test Architect | Playwright & TypeScript Specialist</span>
           </motion.div>
 
           {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-6 max-w-3xl text-5xl font-bold leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl"
-          >
-            Building quality systems
-            <br />
-            that ship at <span className="text-gradient">{displayed}</span>
-            <span className="typewriter-cursor" />
-          </motion.h1>
+          <h1 className="mb-6 max-w-3xl text-5xl font-bold leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            Building automation frameworks and quality systems that ship at scale
+          </h1>
 
           {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-10 max-w-xl text-lg leading-relaxed text-zinc-400"
-          >
-            I architect test infrastructure for distributed systems at Google-scale. Playwright ·
-            Selenium · k6 · AI-powered defect detection. Reduced production incidents by{" "}
-            <span className="font-semibold text-zinc-200">73%</span> across 3 orgs.
-          </motion.p>
+          <p className="mb-10 max-w-xl text-lg leading-relaxed text-[#94a3b8]">
+            8+ years of experience building scalable test automation frameworks, CI/CD quality
+            gates, API testing solutions, contract testing platforms, and AI-powered QA systems
+            for fintech and enterprise SaaS products.
+          </p>
 
           {/* CTAs */}
           <motion.div
@@ -126,21 +100,13 @@ export function Hero() {
           >
             <button
               onClick={() => scrollTo("projects")}
-              className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 transition-all hover:bg-indigo-500 hover:shadow-indigo-500/30 active:scale-[0.98]"
+              className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-indigo-500 hover:shadow-[0_0_24px_rgba(99,102,241,0.4)] active:scale-[0.97]"
+              style={{ boxShadow: "0 0 0 1px rgba(99,102,241,0.4), 0 4px 14px rgba(79,70,229,0.35)" }}
             >
               View my work
               <ArrowRight size={16} />
             </button>
-            {siteConfig.resumeUrl && (
-              <a
-                href={siteConfig.resumeUrl}
-                download
-                className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-zinc-300 transition-all hover:border-white/20 hover:bg-white/8 hover:text-white active:scale-[0.98]"
-              >
-                <Download size={16} />
-                Download resume
-              </a>
-            )}
+            <ResumeModal />
 
             {/* Social links */}
             <div className="flex items-center gap-2">
@@ -163,45 +129,6 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-wrap items-center gap-8"
-          >
-            {siteConfig.stats.map((stat, i) => (
-              <div key={i} className="flex items-center gap-8">
-                <div>
-                  <div className="text-3xl font-bold tracking-tight text-white">
-                    {stat.value}
-                    <span className="text-xl text-indigo-400">{stat.suffix}</span>
-                  </div>
-                  <div className="mt-0.5 text-xs text-zinc-500">{stat.label}</div>
-                </div>
-                {i < siteConfig.stats.length - 1 && (
-                  <div className="h-8 w-px bg-white/8" />
-                )}
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Logos */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-16 border-t border-white/5 pt-10"
-          >
-            <p className="mb-5 text-xs text-zinc-600 uppercase tracking-widest">Previously at</p>
-            <div className="flex flex-wrap items-center gap-6 sm:gap-10">
-              {siteConfig.previousCompanies.map((company) => (
-                <span key={company} className="text-sm font-semibold text-zinc-600 transition-colors hover:text-zinc-400">
-                  {company}
-                </span>
-              ))}
-            </div>
-          </motion.div>
         </div>
 
         <motion.div
@@ -210,6 +137,18 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto w-full max-w-sm lg:max-w-none"
         >
+          {/* Availability badge */}
+          <div className="mb-4 flex justify-center">
+            <div className="flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+              </span>
+              <span className="text-xs font-medium text-emerald-400">
+                Available for Senior SDET / QE Architect roles
+              </span>
+            </div>
+          </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 bg-white/3 shadow-2xl shadow-indigo-950/40">
             {siteConfig.photoUrl ? (
               <img
@@ -225,6 +164,38 @@ export function Hero() {
           </div>
           <div className="mx-auto mt-4 h-px w-2/3 bg-gradient-to-r from-transparent via-indigo-400/40 to-transparent" />
         </motion.div>
+        </div>
+
+        {/* Signature Outcomes — full width row */}
+        <div className="mt-20">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-emerald-400">
+            Signature Outcomes
+          </p>
+          <div className="grid grid-cols-2 gap-5 sm:grid-cols-4">
+            {[
+              { ...siteConfig.stats[0], accent: "#818cf8", glow: "rgba(99,102,241,0.15)", border: "rgba(99,102,241,0.18)" },
+              { ...siteConfig.stats[1], accent: "#38bdf8", glow: "rgba(56,189,248,0.12)", border: "rgba(56,189,248,0.18)" },
+              { ...siteConfig.stats[2], accent: "#a78bfa", glow: "rgba(167,139,250,0.12)", border: "rgba(167,139,250,0.18)" },
+              { ...siteConfig.stats[3], accent: "#34d399", glow: "rgba(52,211,153,0.12)", border: "rgba(52,211,153,0.18)" },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="rounded-2xl px-6 py-8 text-center transition-transform duration-300 hover:-translate-y-1"
+                style={{
+                  background: `linear-gradient(135deg, rgba(13,14,24,0.9) 0%, rgba(13,14,24,0.6) 100%)`,
+                  border: `1px solid ${stat.border}`,
+                  boxShadow: `0 4px 24px ${stat.glow}, inset 0 1px 0 rgba(255,255,255,0.04)`,
+                }}
+              >
+                <div className="text-4xl font-bold tracking-tight" style={{ color: stat.accent }}>
+                  {stat.value}
+                  <span className="text-3xl">{stat.suffix}</span>
+                </div>
+                <div className="mt-2 text-sm font-medium text-[#64748b]">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

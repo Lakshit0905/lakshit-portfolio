@@ -12,10 +12,8 @@ export function Articles() {
     <section id="articles" className="py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          label="Writing"
-          title="Thoughts on"
-          titleHighlight="quality engineering"
-          subtitle="2,400+ followers on Medium · Top writer in Software Testing · Published in Better Programming and Level Up Coding."
+          label="FROM THE BLOG"
+          title="How I Think"
         />
 
         <motion.div

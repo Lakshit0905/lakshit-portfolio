@@ -3,23 +3,17 @@ import type { SkillCategory } from "@/types";
 export const skillCategories: SkillCategory[] = [
   {
     id: "automation",
-    label: "Test Automation",
+    label: "Automation & Frameworks",
     skills: [
       { name: "Playwright", level: 95 },
-      { name: "Selenium WebDriver", level: 93 },
-      { name: "Cypress", level: 85 },
-      { name: "Appium (iOS/Android)", level: 80 },
-      { name: "WebdriverIO", level: 72 },
-    ],
-  },
-  {
-    id: "performance",
-    label: "Performance Testing",
-    skills: [
-      { name: "k6", level: 92 },
-      { name: "Gatling", level: 82 },
-      { name: "JMeter", level: 78 },
-      { name: "Locust", level: 68 },
+      { name: "Pytest", level: 92 },
+      { name: "Selenium", level: 90 },
+      { name: "REST Assured", level: 88 },
+      { name: "Cypress", level: 88 },
+      { name: "Pact", level: 84 },
+      { name: "TestNG", level: 82 },
+      { name: "Appium", level: 80 },
+      { name: "Karate", level: 78 },
     ],
   },
   {
@@ -27,32 +21,43 @@ export const skillCategories: SkillCategory[] = [
     label: "Languages",
     skills: [
       { name: "Python", level: 95 },
-      { name: "Java", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "Go", level: 78 },
-      { name: "Bash / Shell", level: 82 },
+      { name: "Java", level: 88 },
+      { name: "TypeScript", level: 88 },
+      { name: "SQL", level: 85 },
     ],
   },
   {
-    id: "api",
-    label: "API & Integration",
+    id: "api-performance",
+    label: "API & Performance Testing",
     skills: [
-      { name: "REST Assured", level: 90 },
-      { name: "Postman / Newman", level: 88 },
-      { name: "Pact (Contract Testing)", level: 85 },
-      { name: "gRPC testing", level: 80 },
-      { name: "GraphQL testing", level: 75 },
+      { name: "Postman", level: 90 },
+      { name: "k6", level: 88 },
+      { name: "Contract Testing", level: 85 },
+      { name: "Load Testing", level: 85 },
+      { name: "JMeter", level: 80 },
     ],
   },
 ];
 
-export const cloudTools: string[] = [
-  "GCP", "AWS", "Kubernetes", "Docker", "GitHub Actions",
-  "Jenkins", "Terraform", "ArgoCD", "Datadog APM", "Prometheus",
-  "Grafana", "Spinnaker", "InfluxDB", "OpenTelemetry", "Helm",
+// was `cloudTools` — renamed to match content
+export const infraAndCI: string[] = [
+  "GitHub Actions", "CircleCI", "Jenkins", "Docker",
+  "AWS (EC2, S3, Lambda)",
 ];
 
-export const aiTools: string[] = [
-  "LangChain", "OpenAI API", "PyTorch", "scikit-learn",
-  "BigQuery ML", "Healenium", "Percy", "OpenCV", "TensorFlow",
+export const observability: string[] = [
+  "Grafana", "Datadog", "Distributed Tracing", "SLO Monitoring",
 ];
+
+// was `aiTools` — you listed no AI tools, so this now holds data & methodologies
+export const dataAndMethodologies: string[] = [
+  "PostgreSQL", "MongoDB", "DynamoDB", "ETL Validation",
+  "Shift-Left Testing", "BDD", "Agile/SAFe",
+];
+
+export const cloudTools: string[] = [
+  ...infraAndCI,
+  ...observability,
+];
+
+export const aiTools: string[] = dataAndMethodologies;

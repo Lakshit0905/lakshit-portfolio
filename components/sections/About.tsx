@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Briefcase, GraduationCap, Award, BookOpen } from "lucide-react";
+import { MapPin, Briefcase, GraduationCap } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ANIMATION_VARIANTS } from "@/lib/utils";
 
@@ -10,21 +10,13 @@ const quickFacts = [
   { icon: MapPin, text: "Dallas, TX" },
   { icon: Briefcase, text: "Open to remote · hybrid · on-site" },
   { icon: GraduationCap, text: "MS, IT & Management, UT Dallas · Jun 2022" },
-  { icon: GraduationCap, text: "BS, Electronics & Instrumentation, RN Shetty · Jun 2015" },
-  { icon: Award, text: "Dean's Scholar, Top 20% · Data Science Club President" },
-  { icon: BookOpen, text: "Top Student Mentor · 800+ questions, 70+ students coached" },
+  { icon: GraduationCap, text: "BE, Electronics & Instrumentation, VTU · Jun 2015" },
 ];
 
-const quickStats = [
-  { value: "15+", label: "Projects shipped" },
-  { value: "4", label: "FAANG orgs" },
-  { value: "12", label: "Engineers led" },
-  { value: "40+", label: "Articles published" },
-];
 
 const specializations = [
-  "Distributed systems", "Test architecture", "AI/ML testing", "Shift-left QE",
-  "Performance engineering", "Chaos engineering",
+  "Playwright automation", "API testing", "CI/CD quality gates", "Contract testing",
+  "Performance testing", "AI-powered QA",
 ];
 
 export function About() {
@@ -33,8 +25,8 @@ export function About() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label="About me"
-          title="I don&#39;t just test software —"
-          titleHighlight="I engineer confidence"
+          title="I build automation systems"
+          titleHighlight="that make releases safer"
         />
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
@@ -46,18 +38,20 @@ export function About() {
             viewport={{ once: true, margin: "-80px" }}
           >
             <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="mb-4 text-base leading-relaxed text-zinc-400">
-              With 8 years building quality systems at companies like Servicelink and Accenture, I specialize in
-              designing test infrastructure that enables teams to ship faster without sacrificing reliability.
+              I am a Senior SDET with 8+ years of experience across fintech, enterprise SaaS,
+              mortgage platforms, and data-driven applications. I focus on building practical
+              automation frameworks that help teams release faster with fewer surprises.
             </motion.p>
             <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="mb-4 text-base leading-relaxed text-zinc-400">
-              My approach combines shift-left testing philosophy with AI-powered automation — catching
-              defects at the speed of development, not after. I've led QE orgs of up to 12 engineers and
-              defined testing strategy for platforms serving{" "}
-              <span className="font-semibold text-zinc-200">200M+ users</span>.
+              My recent work includes Playwright + TypeScript UI/API automation, GitHub Actions
+              pipelines, Dockerized test execution, API validation, Pact contract testing, SQL
+              checks, and Allure reporting. I care about stable locators, isolated test data,
+              clear defect signals, and automation that developers actually trust.
             </motion.p>
             <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="mb-8 text-base leading-relaxed text-zinc-400">
-              Currently focused on intelligent test generation, flaky test elimination, and building the
-              next generation of autonomous QA systems.
+              I have worked with SilverXis, ServiceLink, and Accenture, with hands-on experience
+              in Playwright, Selenium, Pytest, Appium, Postman, REST Assured, JMeter, AWS, Docker,
+              Jenkins, and modern CI/CD quality gates.
             </motion.p>
             <motion.div variants={ANIMATION_VARIANTS.fadeInUp} className="flex flex-wrap gap-2">
               {specializations.map((spec) => (
@@ -94,25 +88,6 @@ export function About() {
               </div>
             </motion.div>
 
-            {/* Mini stats grid */}
-            <motion.div
-              variants={ANIMATION_VARIANTS.staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-              className="grid grid-cols-2 gap-3"
-            >
-              {quickStats.map(({ value, label }) => (
-                <motion.div
-                  key={label}
-                  variants={ANIMATION_VARIANTS.scaleIn}
-                  className="rounded-xl border border-white/6 bg-white/3 p-4 text-center"
-                >
-                  <div className="text-2xl font-bold tracking-tight text-white">{value}</div>
-                  <div className="mt-0.5 text-xs text-zinc-500">{label}</div>
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
         </div>
       </div>

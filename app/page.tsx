@@ -4,10 +4,15 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Experience } from "@/components/sections/Experience";
 import { Skills } from "@/components/sections/Skills";
-import { AIAutomation } from "@/components/sections/AIAutomation";
 import { Projects } from "@/components/sections/Projects";
 import { Articles } from "@/components/sections/Articles";
 import { Contact } from "@/components/sections/Contact";
+
+const Divider = () => (
+  <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div className="h-px bg-gradient-to-r from-transparent via-indigo-500/15 to-transparent" />
+  </div>
+);
 
 export default function HomePage() {
   return (
@@ -15,58 +20,44 @@ export default function HomePage() {
       <Navbar />
 
       <main>
-        {/* 1. Hero — above the fold, loads instantly */}
+        {/* Hero */}
         <Hero />
 
-        {/* Subtle section divider */}
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-        </div>
+        <Divider />
 
-        {/* 2. About — humanizes the candidate */}
+        {/* About — default bg */}
         <About />
 
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
+        <Divider />
+
+        {/* Experience — slightly elevated surface */}
+        <div className="bg-[#0d0e18]">
+          <Experience />
         </div>
 
-        {/* 3. Experience — career narrative */}
-        <Experience />
+        <Divider />
 
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-        </div>
-
-        {/* 4. Skills — technical depth signal */}
+        {/* Skills — default bg */}
         <Skills />
 
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
+        <Divider />
+
+        {/* Projects — elevated surface */}
+        <div className="bg-[#0d0e18]">
+          <Projects />
         </div>
 
-        {/* 5. AI + Automation — differentiator section */}
-        <AIAutomation />
+        <Divider />
 
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-        </div>
-
-        {/* 6. Projects — proof of work */}
-        <Projects />
-
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-        </div>
-
-        {/* 7. Articles — thought leadership */}
+        {/* Articles — default bg */}
         <Articles />
 
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-        </div>
+        <Divider />
 
-        {/* 8. Contact — conversion goal */}
-        <Contact />
+        {/* Contact — elevated with subtle indigo tint */}
+        <div className="bg-[#0b0c17]">
+          <Contact />
+        </div>
       </main>
 
       <Footer />
