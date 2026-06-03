@@ -15,7 +15,6 @@ export function Experience() {
           label="Work experience"
           title="8 years across"
           titleHighlight="industry-defining companies"
-          subtitle="From early-stage startups to Google-scale distributed systems — building quality infrastructure that enables teams to ship confidently."
         />
 
         <div className="relative">
