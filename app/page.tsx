@@ -5,7 +5,6 @@ import { About } from "@/components/sections/About";
 import { Experience } from "@/components/sections/Experience";
 import { Skills } from "@/components/sections/Skills";
 import { Projects } from "@/components/sections/Projects";
-import { Contact } from "@/components/sections/Contact";
 
 const Divider = () => (
   <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -46,12 +45,7 @@ export default function HomePage() {
           <Projects />
         </div>
 
-        <Divider />
 
-        {/* Contact — elevated with subtle indigo tint */}
-        <div className="bg-[#0b0c17]">
-          <Contact />
-        </div>
       </main>
 
       <Footer />

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, BookOpen } from "lucide-react";
+import { ArrowRight, Github, Linkedin, BookOpen, Sparkles } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { ResumeModal } from "@/components/ui/ResumeModal";
 
@@ -81,7 +81,7 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className="mb-6 max-w-3xl text-5xl font-bold leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl">
-            Building automation frameworks and quality systems that ship at scale
+            Building <span className="text-indigo-400">automation frameworks</span> and <span className="text-violet-400">quality systems</span> that <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">ship at scale</span>
           </h1>
 
           {/* Subheadline */}
@@ -100,7 +100,7 @@ export function Hero() {
           >
             <button
               onClick={() => scrollTo("projects")}
-              className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-indigo-500 hover:shadow-[0_0_24px_rgba(99,102,241,0.4)] active:scale-[0.97]"
+              className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-indigo-500 hover:shadow-[0_0_24px_rgba(99,102,241,0.4)] active:scale-[0.97]"
               style={{ boxShadow: "0 0 0 1px rgba(99,102,241,0.4), 0 4px 14px rgba(79,70,229,0.35)" }}
             >
               View my work
@@ -111,19 +111,19 @@ export function Hero() {
             {/* Social links */}
             <div className="flex items-center gap-2">
               {[
-                { href: siteConfig.github, icon: Github, label: "GitHub" },
-                { href: siteConfig.linkedin, icon: Linkedin, label: "LinkedIn" },
-                { href: siteConfig.medium, icon: BookOpen, label: "Medium" },
-              ].map(({ href, icon: Icon, label }) => (
+                { href: siteConfig.github, icon: Github, label: "GitHub", color: "hover:border-zinc-400/40 hover:bg-zinc-400/10 hover:text-zinc-300", iconColor: "text-zinc-400" },
+                { href: siteConfig.linkedin, icon: Linkedin, label: "LinkedIn", color: "hover:border-[#0A66C2]/40 hover:bg-[#0A66C2]/10 hover:text-[#0A66C2]", iconColor: "text-[#0A66C2]" },
+                { href: siteConfig.medium, icon: BookOpen, label: "Medium", color: "hover:border-green-400/40 hover:bg-green-400/10 hover:text-green-400", iconColor: "text-green-400" },
+              ].map(({ href, icon: Icon, label, color, iconColor }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 text-zinc-500 transition-all hover:border-indigo-500/30 hover:bg-indigo-500/10 hover:text-indigo-400"
+                  className={`flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 transition-all ${iconColor} ${color}`}
                 >
-                  <Icon size={16} />
+                  <Icon size={18} />
                 </a>
               ))}
             </div>
@@ -168,9 +168,11 @@ export function Hero() {
 
         {/* Signature Outcomes — full width row */}
         <div className="mt-20">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-emerald-400">
-            Signature Outcomes
-          </p>
+          <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-emerald-500/25 bg-emerald-500/8 px-4 py-2">
+            <Sparkles size={13} className="text-emerald-400" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-emerald-400">Signature Outcomes</span>
+            <Sparkles size={13} className="text-emerald-400/50" />
+          </div>
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-4">
             {[
               { ...siteConfig.stats[0], accent: "#818cf8", glow: "rgba(99,102,241,0.15)", border: "rgba(99,102,241,0.18)" },

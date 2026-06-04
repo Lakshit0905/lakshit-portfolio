@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, BookOpen, ArrowUp } from "lucide-react";
+import { Linkedin, BookOpen, ArrowUp } from "lucide-react";
+import { SiGithub } from "react-icons/si";
 import { siteConfig } from "@/data/site";
 
 export function Footer() {
@@ -25,17 +26,17 @@ export function Footer() {
           {/* Social */}
           <div className="flex items-center gap-3">
             {[
-              { href: siteConfig.github, icon: Github, label: "GitHub" },
-              { href: siteConfig.linkedin, icon: Linkedin, label: "LinkedIn" },
-              { href: siteConfig.medium, icon: BookOpen, label: "Medium" },
-            ].map(({ href, icon: Icon, label }) => (
+              { href: siteConfig.github,   icon: SiGithub, label: "GitHub",   iconColor: "text-zinc-400",    hoverBorder: "hover:border-zinc-400/40",        hoverBg: "hover:bg-zinc-400/10",        hoverText: "hover:text-zinc-200" },
+              { href: siteConfig.linkedin, icon: Linkedin, label: "LinkedIn", iconColor: "text-[#0A66C2]",   hoverBorder: "hover:border-[#0A66C2]/40",       hoverBg: "hover:bg-[#0A66C2]/10",       hoverText: "hover:text-[#0A66C2]" },
+              { href: siteConfig.medium,   icon: BookOpen, label: "Medium",   iconColor: "text-green-500",   hoverBorder: "hover:border-green-400/40",       hoverBg: "hover:bg-green-400/10",       hoverText: "hover:text-green-400" },
+            ].map(({ href, icon: Icon, label, iconColor, hoverBorder, hoverBg, hoverText }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/8 text-zinc-500 transition-all hover:border-indigo-500/30 hover:bg-indigo-500/10 hover:text-indigo-400"
+                className={`flex h-9 w-9 items-center justify-center rounded-lg border border-white/8 transition-all ${iconColor} ${hoverBorder} ${hoverBg} ${hoverText}`}
               >
                 <Icon size={15} />
               </a>
@@ -56,7 +57,7 @@ export function Footer() {
 
         <div className="mt-8 border-t border-white/5 pt-6 text-center">
           <p className="text-xs text-zinc-600">
-            © {new Date().getFullYear()} {siteConfig.name} · Built with Next.js 15, TypeScript & Framer Motion
+            © {new Date().getFullYear()} {siteConfig.name}
           </p>
         </div>
       </div>

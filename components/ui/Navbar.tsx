@@ -1,18 +1,21 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/data/site";
 import { useActiveSection } from "@/hooks/useActiveSection";
 
-const sectionIds = ["about", "experience", "skills", "projects", "articles", "contact"];
+const sectionIds = ["about", "experience", "skills", "projects"];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const activeSection = useActiveSection(sectionIds);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -31,6 +34,10 @@ export function Navbar() {
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
+    if (href.startsWith("/")) {
+      router.push(href);
+      return;
+    }
     const id = href.replace("#", "");
     const el = document.getElementById(id);
     if (el) {
@@ -38,6 +45,11 @@ export function Navbar() {
       const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: "smooth" });
     }
+  };
+
+  const isLinkActive = (href: string) => {
+    if (href.startsWith("/")) return pathname === href;
+    return activeSection === href.replace("#", "");
   };
 
   return (
@@ -72,8 +84,7 @@ export function Navbar() {
             {/* Desktop nav */}
             <nav className="flex items-center gap-1">
               {siteConfig.navLinks.map((link) => {
-                const id = link.href.replace("#", "");
-                const isActive = activeSection === id;
+                const isActive = isLinkActive(link.href);
                 return (
                   <button
                     key={link.href}

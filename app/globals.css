@@ -86,6 +86,11 @@
     text-transform: uppercase;
     color: #818cf8;
   }
+  .section-label::before {
+    content: "✦";
+    font-size: 0.6rem;
+    opacity: 0.8;
+  }
 
   /* Tech badge */
   .tech-badge {

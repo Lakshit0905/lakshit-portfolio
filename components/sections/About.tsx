@@ -1,23 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Briefcase, GraduationCap } from "lucide-react";
+import { MapPin, Briefcase, GraduationCap, Zap, Shield, GitBranch, TestTube } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ANIMATION_VARIANTS } from "@/lib/utils";
 
-
 const quickFacts = [
-  { icon: MapPin, text: "Dallas, TX" },
-  { icon: Briefcase, text: "Open to remote · hybrid · on-site" },
-  { icon: GraduationCap, text: "MS, IT & Management, UT Dallas · Jun 2022" },
-  { icon: GraduationCap, text: "BE, Electronics & Instrumentation, VTU · Jun 2015" },
+  { icon: MapPin, text: "Dallas, TX", color: "text-rose-400", bg: "bg-rose-500/10" },
+  { icon: Briefcase, text: "Open to remote · hybrid · on-site", color: "text-indigo-400", bg: "bg-indigo-500/10" },
+  { icon: GraduationCap, text: "MS, IT & Management — UT Dallas · 2022", color: "text-violet-400", bg: "bg-violet-500/10" },
+  { icon: GraduationCap, text: "BE, Electronics & Instrumentation — VTU · 2015", color: "text-violet-400", bg: "bg-violet-500/10" },
 ];
 
-
-const specializations = [
-  "Playwright automation", "API testing", "CI/CD quality gates", "Contract testing",
-  "Performance testing", "AI-powered QA",
+const strengths = [
+  { icon: Zap, label: "Fast feedback loops", desc: "Sub-1hr regression suites in CI", color: "text-amber-400", bg: "bg-amber-500/10" },
+  { icon: Shield, label: "Shift-left quality", desc: "Catching bugs before they ship", color: "text-emerald-400", bg: "bg-emerald-500/10" },
+  { icon: GitBranch, label: "CI/CD integration", desc: "GitHub Actions, Docker, Jenkins", color: "text-sky-400", bg: "bg-sky-500/10" },
+  { icon: TestTube, label: "Full-stack testing", desc: "UI · API · contract · performance", color: "text-indigo-400", bg: "bg-indigo-500/10" },
 ];
+
+const coreTechnologies = [
+  { name: "Playwright",      text: "text-violet-400",  border: "border-violet-500/25",  bg: "bg-violet-500/10",  hover: "hover:border-violet-400/50 hover:bg-violet-500/20 hover:text-violet-300" },
+  { name: "TypeScript",      text: "text-sky-400",     border: "border-sky-500/25",     bg: "bg-sky-500/10",     hover: "hover:border-sky-400/50 hover:bg-sky-500/20 hover:text-sky-300" },
+  { name: "Selenium",        text: "text-amber-400",   border: "border-amber-500/25",   bg: "bg-amber-500/10",   hover: "hover:border-amber-400/50 hover:bg-amber-500/20 hover:text-amber-300" },
+  { name: "Python",          text: "text-sky-400",     border: "border-sky-500/25",     bg: "bg-sky-500/10",     hover: "hover:border-sky-400/50 hover:bg-sky-500/20 hover:text-sky-300" },
+  { name: "GitHub Actions",  text: "text-zinc-300",    border: "border-zinc-500/25",    bg: "bg-zinc-500/10",    hover: "hover:border-zinc-400/50 hover:bg-zinc-500/20 hover:text-white" },
+  { name: "Docker",          text: "text-cyan-400",    border: "border-cyan-500/25",    bg: "bg-cyan-500/10",    hover: "hover:border-cyan-400/50 hover:bg-cyan-500/20 hover:text-cyan-300" },
+  { name: "AWS",             text: "text-orange-400",  border: "border-orange-500/25",  bg: "bg-orange-500/10",  hover: "hover:border-orange-400/50 hover:bg-orange-500/20 hover:text-orange-300" },
+  { name: "Jenkins",         text: "text-rose-400",    border: "border-rose-500/25",    bg: "bg-rose-500/10",    hover: "hover:border-rose-400/50 hover:bg-rose-500/20 hover:text-rose-300" },
+  { name: "REST Assured",    text: "text-emerald-400", border: "border-emerald-500/25", bg: "bg-emerald-500/10", hover: "hover:border-emerald-400/50 hover:bg-emerald-500/20 hover:text-emerald-300" },
+  { name: "Pact",            text: "text-indigo-400",  border: "border-indigo-500/25",  bg: "bg-indigo-500/10",  hover: "hover:border-indigo-400/50 hover:bg-indigo-500/20 hover:text-indigo-300" },
+  { name: "Postman",         text: "text-orange-400",  border: "border-orange-500/25",  bg: "bg-orange-500/10",  hover: "hover:border-orange-400/50 hover:bg-orange-500/20 hover:text-orange-300" },
+  { name: "SQL",             text: "text-teal-400",    border: "border-teal-500/25",    bg: "bg-teal-500/10",    hover: "hover:border-teal-400/50 hover:bg-teal-500/20 hover:text-teal-300" },
+  { name: "JMeter",          text: "text-rose-400",    border: "border-rose-500/25",    bg: "bg-rose-500/10",    hover: "hover:border-rose-400/50 hover:bg-rose-500/20 hover:text-rose-300" },
+  { name: "Appium",          text: "text-violet-400",  border: "border-violet-500/25",  bg: "bg-violet-500/10",  hover: "hover:border-violet-400/50 hover:bg-violet-500/20 hover:text-violet-300" },
+];
+
 
 export function About() {
   return (
@@ -29,40 +47,51 @@ export function About() {
           titleHighlight="that make releases safer"
         />
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Bio */}
           <motion.div
             variants={ANIMATION_VARIANTS.staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
+            className="flex flex-col gap-5"
           >
-            <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="mb-4 text-base leading-relaxed text-zinc-400">
-              I am a Senior SDET with 8+ years of experience across fintech, enterprise SaaS,
-              mortgage platforms, and data-driven applications. I focus on building practical
-              automation frameworks that help teams release faster with fewer surprises.
-            </motion.p>
-            <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="mb-4 text-base leading-relaxed text-zinc-400">
-              My recent work includes Playwright + TypeScript UI/API automation, GitHub Actions
-              pipelines, Dockerized test execution, API validation, Pact contract testing, SQL
-              checks, and Allure reporting. I care about stable locators, isolated test data,
-              clear defect signals, and automation that developers actually trust.
-            </motion.p>
-            <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="mb-8 text-base leading-relaxed text-zinc-400">
-              I have worked with SilverXis, ServiceLink, and Accenture, with hands-on experience
-              in Playwright, Selenium, Pytest, Appium, Postman, REST Assured, JMeter, AWS, Docker,
-              Jenkins, and modern CI/CD quality gates.
-            </motion.p>
-            <motion.div variants={ANIMATION_VARIANTS.fadeInUp} className="flex flex-wrap gap-2">
-              {specializations.map((spec) => (
-                <span
-                  key={spec}
-                  className="rounded-full border border-indigo-500/20 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-400"
-                >
-                  {spec}
-                </span>
-              ))}
+            <div>
+              <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="mb-3 text-base leading-relaxed text-zinc-400">
+                I am a Senior SDET with <span className="text-white font-medium">8+ years</span> of experience across fintech, enterprise SaaS,
+                mortgage platforms, and data-driven applications. I focus on building practical
+                automation frameworks that help teams release faster with fewer surprises.
+              </motion.p>
+              <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="mb-3 text-base leading-relaxed text-zinc-400">
+                My recent work includes <span className="text-indigo-400 font-medium">Playwright + TypeScript</span> UI/API automation, GitHub Actions
+                pipelines, Dockerized test execution, API validation, Pact contract testing, SQL
+                checks, and Allure reporting. I care about stable locators, isolated test data,
+                clear defect signals, and automation that developers actually trust.
+              </motion.p>
+              <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="text-base leading-relaxed text-zinc-400">
+                Worked with <span className="text-white font-medium">SilverXis, ServiceLink, and Accenture</span> — hands-on across
+                Playwright, Selenium, Pytest, Appium, Postman, REST Assured, JMeter, AWS, Docker,
+                Jenkins, and modern CI/CD quality gates.
+              </motion.p>
+            </div>
+
+            {/* Core Technologies */}
+            <motion.div
+              variants={ANIMATION_VARIANTS.fadeInUp}
+              className="rounded-2xl border border-white/8 bg-white/[0.03] p-4"
+            >
+              <div className="grid grid-cols-3 gap-2">
+                {coreTechnologies.map(({ name, text, border, bg, hover }) => (
+                  <div
+                    key={name}
+                    className={`rounded-lg border px-3 py-2 text-center text-xs font-medium transition-all duration-200 cursor-default ${text} ${border} ${bg} ${hover}`}
+                  >
+                    {name}
+                  </div>
+                ))}
+              </div>
             </motion.div>
+
           </motion.div>
 
           {/* Right column */}
@@ -73,21 +102,42 @@ export function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
-              className="rounded-2xl border border-white/6 bg-white/3 p-6"
+              className="rounded-2xl border border-white/8 bg-white/[0.03] p-6"
             >
-              <h3 className="mb-5 text-sm font-semibold text-white">Quick facts</h3>
-              <div className="flex flex-col gap-3.5">
-                {quickFacts.map(({ icon: Icon, text }) => (
+              <h3 className="mb-5 text-sm font-semibold uppercase tracking-widest text-zinc-500">Quick facts</h3>
+              <div className="flex flex-col gap-3">
+                {quickFacts.map(({ icon: Icon, text, color, bg }) => (
                   <div key={text} className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-indigo-500/10">
-                      <Icon size={14} className="text-indigo-400" />
+                    <div className={`flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg ${bg}`}>
+                      <Icon size={15} className={color} />
                     </div>
-                    <span className="text-sm text-zinc-400">{text}</span>
+                    <span className="text-sm text-zinc-300">{text}</span>
                   </div>
                 ))}
               </div>
             </motion.div>
 
+            {/* Strengths */}
+            <motion.div
+              variants={ANIMATION_VARIANTS.scaleIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              className="rounded-2xl border border-white/8 bg-white/[0.03] p-6"
+            >
+              <h3 className="mb-5 text-sm font-semibold uppercase tracking-widest text-zinc-500">What I bring</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {strengths.map(({ icon: Icon, label, desc, color, bg }) => (
+                  <div key={label} className="flex flex-col gap-2 rounded-xl border border-white/5 bg-white/[0.02] p-3">
+                    <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${bg}`}>
+                      <Icon size={14} className={color} />
+                    </div>
+                    <p className="text-xs font-semibold text-white">{label}</p>
+                    <p className="text-xs text-zinc-500">{desc}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
