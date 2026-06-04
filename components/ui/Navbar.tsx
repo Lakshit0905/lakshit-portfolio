@@ -98,15 +98,15 @@ export function Navbar() {
 
                     {/* hover underline */}
                     {!isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[3px] origin-center scale-x-0 rounded-full bg-orange-400 transition-transform duration-200 group-hover:scale-x-100" />
+                      <span className="absolute bottom-0 left-3 right-3 h-[2px] origin-center scale-x-0 rounded-full bg-emerald-400 transition-transform duration-200 group-hover:scale-x-100" />
                     )}
 
                     {/* active underline */}
                     {isActive && (
                       <motion.span
                         layoutId="activeNav"
-                        className="absolute bottom-0 left-0 right-0 h-[3px] rounded-full bg-orange-400"
-                        style={{ boxShadow: "0 0 16px 4px rgba(251,146,60,1)" }}
+                        className="absolute bottom-0 left-3 right-3 h-[2px] rounded-full bg-emerald-400"
+                        style={{ boxShadow: "0 0 10px 2px rgba(52,211,153,0.8)" }}
                         transition={{ type: "spring", stiffness: 380, damping: 32 }}
                       />
                     )}
