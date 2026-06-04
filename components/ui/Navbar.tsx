@@ -90,20 +90,26 @@ export function Navbar() {
                     key={link.href}
                     onClick={() => handleNavClick(link.href)}
                     className={cn(
-                      "relative rounded-md px-3 py-2 text-sm font-medium transition-all duration-200",
-                      isActive
-                        ? "text-white"
-                        : "text-[#64748b] hover:text-[#94a3b8]"
+                      "group relative px-3 pb-3 pt-2 text-sm font-semibold transition-colors duration-200",
+                      isActive ? "text-white" : "text-zinc-300 hover:text-white"
                     )}
                   >
+                    <span className="relative z-10">{link.label}</span>
+
+                    {/* hover underline */}
+                    {!isActive && (
+                      <span className="absolute bottom-0 left-0 right-0 h-[3px] origin-center scale-x-0 rounded-full bg-orange-400 transition-transform duration-200 group-hover:scale-x-100" />
+                    )}
+
+                    {/* active underline */}
                     {isActive && (
                       <motion.span
                         layoutId="activeNav"
-                        className="absolute inset-0 rounded-md bg-indigo-500/10 ring-1 ring-indigo-500/20"
-                        transition={{ type: "spring", stiffness: 350, damping: 35 }}
+                        className="absolute bottom-0 left-0 right-0 h-[3px] rounded-full bg-orange-400"
+                        style={{ boxShadow: "0 0 16px 4px rgba(251,146,60,1)" }}
+                        transition={{ type: "spring", stiffness: 380, damping: 32 }}
                       />
                     )}
-                    <span className="relative z-10">{link.label}</span>
                   </button>
                 );
               })}
@@ -145,18 +151,27 @@ export function Navbar() {
             style={{ backdropFilter: "blur(20px)" }}
           >
             <nav className="flex flex-col gap-1">
-              {siteConfig.navLinks.map((link, i) => (
-                <motion.button
-                  key={link.href}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.06 }}
-                  onClick={() => handleNavClick(link.href)}
-                  className="rounded-lg px-4 py-3 text-left text-lg font-medium text-zinc-300 transition-colors hover:bg-white/5 hover:text-white"
-                >
-                  {link.label}
-                </motion.button>
-              ))}
+              {siteConfig.navLinks.map((link, i) => {
+                const isActive = isLinkActive(link.href);
+                return (
+                  <motion.button
+                    key={link.href}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.06 }}
+                    onClick={() => handleNavClick(link.href)}
+                    className={cn(
+                      "flex items-center gap-3 rounded-lg px-4 py-3 text-left text-lg font-medium transition-colors",
+                      isActive ? "text-white" : "text-zinc-400 hover:text-white"
+                    )}
+                  >
+                    {isActive && (
+                      <span className="h-5 w-[3px] rounded-full bg-gradient-to-b from-indigo-400 to-violet-400" />
+                    )}
+                    {link.label}
+                  </motion.button>
+                );
+              })}
             </nav>
             {siteConfig.resumeUrl && (
               <div className="mt-8">

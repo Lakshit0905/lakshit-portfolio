@@ -1,9 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Briefcase, GraduationCap, Zap, Shield, GitBranch, TestTube } from "lucide-react";
+import { MapPin, Briefcase, GraduationCap, Zap, Shield, GitBranch, TestTube, ShieldCheck, Database } from "lucide-react";
+import {
+  SiTypescript, SiSelenium, SiPython, SiGithubactions,
+  SiDocker, SiJenkins, SiPostman, SiApachejmeter, SiAppium,
+} from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ANIMATION_VARIANTS } from "@/lib/utils";
+
+function PlaywrightIcon({ size = 12, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" className={className}>
+      <circle cx="10" cy="10" r="8" fill="currentColor" opacity="0.85" />
+      <circle cx="22" cy="22" r="8" fill="currentColor" opacity="0.45" />
+    </svg>
+  );
+}
+
+function PactIcon({ size = 12, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
+      <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <rect x="9" y="3" width="6" height="4" rx="1" stroke="currentColor" strokeWidth="2"/>
+      <path d="M9 12h6M9 16h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+  );
+}
 
 const quickFacts = [
   { icon: MapPin, text: "Dallas, TX", color: "text-rose-400", bg: "bg-rose-500/10" },
@@ -20,20 +44,20 @@ const strengths = [
 ];
 
 const coreTechnologies = [
-  { name: "Playwright",      text: "text-violet-400",  border: "border-violet-500/25",  bg: "bg-violet-500/10",  hover: "hover:border-violet-400/50 hover:bg-violet-500/20 hover:text-violet-300" },
-  { name: "TypeScript",      text: "text-sky-400",     border: "border-sky-500/25",     bg: "bg-sky-500/10",     hover: "hover:border-sky-400/50 hover:bg-sky-500/20 hover:text-sky-300" },
-  { name: "Selenium",        text: "text-amber-400",   border: "border-amber-500/25",   bg: "bg-amber-500/10",   hover: "hover:border-amber-400/50 hover:bg-amber-500/20 hover:text-amber-300" },
-  { name: "Python",          text: "text-sky-400",     border: "border-sky-500/25",     bg: "bg-sky-500/10",     hover: "hover:border-sky-400/50 hover:bg-sky-500/20 hover:text-sky-300" },
-  { name: "GitHub Actions",  text: "text-zinc-300",    border: "border-zinc-500/25",    bg: "bg-zinc-500/10",    hover: "hover:border-zinc-400/50 hover:bg-zinc-500/20 hover:text-white" },
-  { name: "Docker",          text: "text-cyan-400",    border: "border-cyan-500/25",    bg: "bg-cyan-500/10",    hover: "hover:border-cyan-400/50 hover:bg-cyan-500/20 hover:text-cyan-300" },
-  { name: "AWS",             text: "text-orange-400",  border: "border-orange-500/25",  bg: "bg-orange-500/10",  hover: "hover:border-orange-400/50 hover:bg-orange-500/20 hover:text-orange-300" },
-  { name: "Jenkins",         text: "text-rose-400",    border: "border-rose-500/25",    bg: "bg-rose-500/10",    hover: "hover:border-rose-400/50 hover:bg-rose-500/20 hover:text-rose-300" },
-  { name: "REST Assured",    text: "text-emerald-400", border: "border-emerald-500/25", bg: "bg-emerald-500/10", hover: "hover:border-emerald-400/50 hover:bg-emerald-500/20 hover:text-emerald-300" },
-  { name: "Pact",            text: "text-indigo-400",  border: "border-indigo-500/25",  bg: "bg-indigo-500/10",  hover: "hover:border-indigo-400/50 hover:bg-indigo-500/20 hover:text-indigo-300" },
-  { name: "Postman",         text: "text-orange-400",  border: "border-orange-500/25",  bg: "bg-orange-500/10",  hover: "hover:border-orange-400/50 hover:bg-orange-500/20 hover:text-orange-300" },
-  { name: "SQL",             text: "text-teal-400",    border: "border-teal-500/25",    bg: "bg-teal-500/10",    hover: "hover:border-teal-400/50 hover:bg-teal-500/20 hover:text-teal-300" },
-  { name: "JMeter",          text: "text-rose-400",    border: "border-rose-500/25",    bg: "bg-rose-500/10",    hover: "hover:border-rose-400/50 hover:bg-rose-500/20 hover:text-rose-300" },
-  { name: "Appium",          text: "text-violet-400",  border: "border-violet-500/25",  bg: "bg-violet-500/10",  hover: "hover:border-violet-400/50 hover:bg-violet-500/20 hover:text-violet-300" },
+  { name: "Playwright",     icon: PlaywrightIcon, text: "text-violet-400",  border: "border-violet-500/25",  bg: "bg-violet-500/10",  hover: "hover:border-violet-400/50 hover:bg-violet-500/20 hover:text-violet-300" },
+  { name: "TypeScript",     icon: SiTypescript,   text: "text-sky-400",     border: "border-sky-500/25",     bg: "bg-sky-500/10",     hover: "hover:border-sky-400/50 hover:bg-sky-500/20 hover:text-sky-300" },
+  { name: "Selenium",       icon: SiSelenium,     text: "text-amber-400",   border: "border-amber-500/25",   bg: "bg-amber-500/10",   hover: "hover:border-amber-400/50 hover:bg-amber-500/20 hover:text-amber-300" },
+  { name: "Python",         icon: SiPython,       text: "text-sky-400",     border: "border-sky-500/25",     bg: "bg-sky-500/10",     hover: "hover:border-sky-400/50 hover:bg-sky-500/20 hover:text-sky-300" },
+  { name: "GitHub Actions", icon: SiGithubactions,text: "text-zinc-300",    border: "border-zinc-500/25",    bg: "bg-zinc-500/10",    hover: "hover:border-zinc-400/50 hover:bg-zinc-500/20 hover:text-white" },
+  { name: "Docker",         icon: SiDocker,       text: "text-cyan-400",    border: "border-cyan-500/25",    bg: "bg-cyan-500/10",    hover: "hover:border-cyan-400/50 hover:bg-cyan-500/20 hover:text-cyan-300" },
+  { name: "AWS",            icon: FaAws,          text: "text-orange-400",  border: "border-orange-500/25",  bg: "bg-orange-500/10",  hover: "hover:border-orange-400/50 hover:bg-orange-500/20 hover:text-orange-300" },
+  { name: "Jenkins",        icon: SiJenkins,      text: "text-rose-400",    border: "border-rose-500/25",    bg: "bg-rose-500/10",    hover: "hover:border-rose-400/50 hover:bg-rose-500/20 hover:text-rose-300" },
+  { name: "REST Assured",   icon: ShieldCheck,    text: "text-emerald-400", border: "border-emerald-500/25", bg: "bg-emerald-500/10", hover: "hover:border-emerald-400/50 hover:bg-emerald-500/20 hover:text-emerald-300" },
+  { name: "Pact",           icon: PactIcon,       text: "text-indigo-400",  border: "border-indigo-500/25",  bg: "bg-indigo-500/10",  hover: "hover:border-indigo-400/50 hover:bg-indigo-500/20 hover:text-indigo-300" },
+  { name: "Postman",        icon: SiPostman,      text: "text-orange-400",  border: "border-orange-500/25",  bg: "bg-orange-500/10",  hover: "hover:border-orange-400/50 hover:bg-orange-500/20 hover:text-orange-300" },
+  { name: "SQL",            icon: Database,       text: "text-teal-400",    border: "border-teal-500/25",    bg: "bg-teal-500/10",    hover: "hover:border-teal-400/50 hover:bg-teal-500/20 hover:text-teal-300" },
+  { name: "JMeter",         icon: SiApachejmeter, text: "text-rose-400",    border: "border-rose-500/25",    bg: "bg-rose-500/10",    hover: "hover:border-rose-400/50 hover:bg-rose-500/20 hover:text-rose-300" },
+  { name: "Appium",         icon: SiAppium,       text: "text-violet-400",  border: "border-violet-500/25",  bg: "bg-violet-500/10",  hover: "hover:border-violet-400/50 hover:bg-violet-500/20 hover:text-violet-300" },
 ];
 
 
@@ -81,12 +105,13 @@ export function About() {
               className="rounded-2xl border border-white/8 bg-white/[0.03] p-4"
             >
               <div className="grid grid-cols-3 gap-2">
-                {coreTechnologies.map(({ name, text, border, bg, hover }) => (
+                {coreTechnologies.map(({ name, icon: Icon, text, border, bg, hover }) => (
                   <div
                     key={name}
-                    className={`rounded-lg border px-3 py-2 text-center text-xs font-medium transition-all duration-200 cursor-default ${text} ${border} ${bg} ${hover}`}
+                    className={`flex cursor-default items-center justify-center gap-1.5 rounded-lg border px-2 py-2 text-xs font-medium transition-all duration-200 ${text} ${border} ${bg} ${hover}`}
                   >
-                    {name}
+                    <Icon size={12} />
+                    <span>{name}</span>
                   </div>
                 ))}
               </div>
