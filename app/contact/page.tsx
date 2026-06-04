@@ -108,9 +108,7 @@ export default function ContactPage() {
 
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Let&apos;s talk quality{" "}
-            <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent">
-              at scale
-            </span>
+            <span className="text-white">at scale</span>
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-zinc-400">
             Whether you&apos;re hiring for a Senior SDET, QE Architect, or Staff Engineer role — or want to collaborate on open source — I&apos;d love to connect.
