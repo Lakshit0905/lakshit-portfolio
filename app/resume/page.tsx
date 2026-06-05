@@ -6,6 +6,7 @@ import { siteConfig } from "@/data/site";
 import { experiences } from "@/data/experience";
 import { projects } from "@/data/projects";
 import { SkillCards } from "@/components/ui/SkillCards";
+import { TechChip } from "@/components/ui/TechChip";
 
 const education = [
   {
@@ -153,9 +154,7 @@ export default function ResumePage() {
                   </ul>
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {exp.techStack.map((t) => (
-                      <span key={t} className="rounded-full border border-white/8 bg-white/4 px-2 py-0.5 text-xs text-zinc-500">
-                        {t}
-                      </span>
+                      <TechChip key={t} name={t} />
                     ))}
                   </div>
                 </div>
@@ -186,9 +185,7 @@ export default function ResumePage() {
                   <p className="mb-3 text-xs leading-relaxed text-zinc-400">{project.description}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {project.techStack.map((t) => (
-                      <span key={t} className={`rounded-full border px-2 py-0.5 text-xs ${c.accent} ${c.chipBorder} ${c.chipBg}`}>
-                        {t}
-                      </span>
+                      <TechChip key={t} name={t} />
                     ))}
                   </div>
                 </div>
