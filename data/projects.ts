@@ -7,7 +7,7 @@ export const projects: Project[] = [
     description:
       "Designed an evaluation harness using pytest and custom scoring functions to detect prompt regressions, output drift, and quality degradation across model versions, applied to internal GenAI feature releases.",
     techStack: ["Python", "pytest", "LLM Evaluation", "Scoring Functions", "GenAI"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Lakshit0905/llm-regression-framework",
   },
   {
     id: "autonomous-flakiness-detector",
