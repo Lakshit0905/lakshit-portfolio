@@ -11,7 +11,7 @@ export const siteConfig = {
   medium: "https://medium.com/@lakshit.rajput905",
   location: "Dallas TX",
   availability: "Open to Senior SDET · Staff QE · QE Architect roles",
-  url: "https://lakshit-portfolio-eta.vercel.app/",
+  url: "https://lakshitrajput.com/",
   photoUrl: "/laks.JPEG",
   resumeUrl: "/resume.pdf",
   roles: ["Senior SDET", "QE Architect", "Automation Engineer", "Quality Engineer"],
