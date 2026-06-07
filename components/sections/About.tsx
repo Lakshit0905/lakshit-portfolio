@@ -82,7 +82,7 @@ export function About() {
           >
             <div>
               <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="mb-3 text-base leading-relaxed text-zinc-400">
-                I am a Senior SDET with <span className="text-white font-medium">8+ years</span> of experience across fintech, enterprise SaaS,
+                I am a Senior SDET with <span className="text-white font-medium">7+ years</span> of experience across fintech, enterprise SaaS,
                 mortgage platforms, and data-driven applications. I focus on building practical
                 automation frameworks that help teams release faster with fewer surprises.
               </motion.p>

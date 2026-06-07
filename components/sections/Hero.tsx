@@ -86,7 +86,7 @@ export function Hero() {
 
           {/* Subheadline */}
           <p className="mb-10 max-w-xl text-lg leading-relaxed text-[#94a3b8]">
-            8+ years of experience building scalable test automation frameworks, CI/CD quality
+            7+ years of experience building scalable test automation frameworks, CI/CD quality
             gates, API testing solutions, contract testing platforms, and AI-powered QA systems
             for fintech and enterprise SaaS products.
           </p>

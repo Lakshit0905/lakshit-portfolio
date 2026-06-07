@@ -179,7 +179,7 @@ export function Experience() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label="Work experience"
-          title="8+ years across"
+          title="7+ years across"
           titleHighlight="industry-defining companies"
         />
 

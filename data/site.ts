@@ -4,7 +4,7 @@ export const siteConfig = {
   title: "Senior SDET",
   tagline: "Building quality systems that ship at scale",
   description:
-    "Senior SDET with 8+ years building Playwright, TypeScript, UI/API automation, CI/CD quality gates, and performance testing across fintech, enterprise SaaS, mortgage, and data platforms.",
+    "Senior SDET with 7+ years building Playwright, TypeScript, UI/API automation, CI/CD quality gates, and performance testing across fintech, enterprise SaaS, mortgage, and data platforms.",
   email: "rajput.lakshit0905@gmail.com",
   linkedin: "https://www.linkedin.com/in/lakshitrajput/",
   github: "https://github.com/Lakshit0905",
