@@ -16,7 +16,7 @@ export const siteConfig = {
   resumeUrl: "/resume.pdf",
   roles: ["Senior SDET", "QE Architect", "Automation Engineer", "Quality Engineer"],
   stats: [
-    { value: "8", suffix: "+", label: "Years in SDET" },
+    { value: "7", suffix: "+", label: "Years in SDET" },
     { value: "450", suffix: "+", label: "UI/API scenarios" },
     { value: "200", suffix: "+", label: "Endpoints tested" },
     { value: "<1", suffix: "hr", label: "Regression runtime" },
