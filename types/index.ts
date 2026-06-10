@@ -44,6 +44,7 @@ export interface Project {
   stars?: number;
   featured?: boolean;
   badge?: string;
+  inProgress?: boolean;
 }
 
 export interface Article {

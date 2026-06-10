@@ -2,6 +2,15 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    id: "interview-os",
+    title: "Interview OS – AI-Powered Learning & Interview Intelligence Platform",
+    description:
+      "Building a full-stack platform that transforms engineering content into searchable knowledge graphs, automated revision systems, flashcards, mock interviews, and interview-readiness analytics using LLMs, RAG pipelines, and semantic search.",
+    techStack: ["Next.js", "TypeScript", "Python", "PostgreSQL", "Prisma", "OpenAI API", "Claude API", "RAG", "LLM Evaluation", "AI Agents", "GitHub Actions"],
+    githubUrl: "https://github.com/Lakshit0905/interview-portal",
+    inProgress: true,
+  },
+  {
     id: "llm-regression-testing-framework",
     title: "LLM Regression Testing Framework",
     description:

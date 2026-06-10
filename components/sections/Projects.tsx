@@ -1,8 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, BookOpen, Bot, Activity, TrendingUp, BarChart3 } from "lucide-react";
-import { SiPython, SiPytest, SiOpenai, SiSlack, SiGithubactions, SiGithub } from "react-icons/si";
+import { ExternalLink, BookOpen, Bot, Activity, TrendingUp, BarChart3, Network } from "lucide-react";
+import {
+  SiPython,
+  SiPytest,
+  SiOpenai,
+  SiSlack,
+  SiGithubactions,
+  SiGithub,
+  SiNextdotjs,
+  SiTypescript,
+  SiPostgresql,
+  SiPrisma,
+  SiClaude,
+} from "react-icons/si";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { projects } from "@/data/projects";
 import { ANIMATION_VARIANTS } from "@/lib/utils";
@@ -20,6 +32,14 @@ const techIconMap: Record<string, { Icon: IconComponent; text: string; bg: strin
   "Statistical Analysis":{ Icon: TrendingUp,         text: "text-emerald-300",bg: "bg-emerald-500/10", border: "border-emerald-500/20" },
   "Slack API":           { Icon: SiSlack,            text: "text-rose-300",   bg: "bg-rose-500/10",    border: "border-rose-500/20" },
   "GitHub Actions":      { Icon: SiGithubactions,    text: "text-zinc-200",   bg: "bg-zinc-500/10",    border: "border-zinc-500/20" },
+  "Next.js":             { Icon: SiNextdotjs,        text: "text-zinc-200",   bg: "bg-zinc-500/10",    border: "border-zinc-500/20" },
+  "TypeScript":          { Icon: SiTypescript,       text: "text-blue-300",   bg: "bg-blue-500/10",    border: "border-blue-500/20" },
+  "PostgreSQL":          { Icon: SiPostgresql,       text: "text-sky-300",    bg: "bg-sky-500/10",     border: "border-sky-500/20" },
+  "Prisma":              { Icon: SiPrisma,           text: "text-zinc-200",   bg: "bg-zinc-500/10",    border: "border-zinc-500/20" },
+  "OpenAI API":          { Icon: SiOpenai,           text: "text-emerald-300",bg: "bg-emerald-500/10", border: "border-emerald-500/20" },
+  "Claude API":          { Icon: SiClaude,           text: "text-orange-300", bg: "bg-orange-500/10",  border: "border-orange-500/20" },
+  "RAG":                 { Icon: Network,            text: "text-fuchsia-300",bg: "bg-fuchsia-500/10", border: "border-fuchsia-500/20" },
+  "AI Agents":           { Icon: Bot,                text: "text-indigo-300", bg: "bg-indigo-500/10",  border: "border-indigo-500/20" },
 };
 
 const fallbackIcon = { Icon: Activity, text: "text-zinc-300", bg: "bg-zinc-500/10", border: "border-zinc-500/20" };
@@ -85,7 +105,15 @@ export function Projects() {
 
                 {/* Badge row */}
                 <div className="mb-4 flex items-center justify-between">
-                  {project.badge ? (
+                  {project.inProgress ? (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/15 px-2.5 py-0.5 text-xs font-semibold text-emerald-300">
+                      <span className="relative flex h-1.5 w-1.5">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                      </span>
+                      Currently working on
+                    </span>
+                  ) : project.badge ? (
                     <span className={`rounded-full border px-2.5 py-0.5 text-xs font-semibold ${theme.badgeBorder} ${theme.badgeBg} ${theme.badgeText}`}>
                       {project.badge}
                     </span>
