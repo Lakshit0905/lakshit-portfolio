@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Lakshit Rajput",
   initials: "LR",
-  title: "Senior SDET",
+  title: "SDET",
   tagline: "Building quality systems that ship at scale",
   description:
     "Senior SDET with 7+ years in fintech, enterprise SaaS, and data platforms, building Playwright and TypeScript UI/API automation, CI/CD quality gates, and AI-powered QA solutions.",
