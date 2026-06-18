@@ -4,7 +4,7 @@ export const siteConfig = {
   title: "Senior SDET",
   tagline: "Building quality systems that ship at scale",
   description:
-    "Senior SDET with 7+ years building Playwright, TypeScript, UI/API automation, CI/CD quality gates, and performance testing across fintech, enterprise SaaS, mortgage, and data platforms.",
+    "Senior SDET with 7+ years in fintech, enterprise SaaS, and data platforms, building Playwright and TypeScript UI/API automation, CI/CD quality gates, and AI-powered QA solutions.",
   email: "rajput.lakshit0905@gmail.com",
   linkedin: "https://www.linkedin.com/in/lakshitrajput/",
   github: "https://github.com/Lakshit0905",
@@ -21,7 +21,7 @@ export const siteConfig = {
     { value: "200", suffix: "+", label: "Endpoints tested" },
     { value: "<1", suffix: "hr", label: "Regression runtime" },
   ],
-  previousCompanies: ["SilverXis", "ServiceLink", "Accenture"],
+  previousCompanies: ["SilverXis", "ServiceLink", "Cardinal Health", "Accenture"],
   navLinks: [
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },

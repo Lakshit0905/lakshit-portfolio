@@ -31,7 +31,6 @@ export const skillCategories: SkillCategory[] = [
     label: "API & Performance Testing",
     skills: [
       { name: "Postman", level: 90 },
-      { name: "k6", level: 88 },
       { name: "Contract Testing", level: 85 },
       { name: "Load Testing", level: 85 },
       { name: "JMeter", level: 80 },
@@ -45,10 +44,6 @@ export const infraAndCI: string[] = [
   "AWS (EC2, S3, Lambda)",
 ];
 
-export const observability: string[] = [
-  "Grafana", "Datadog", "Distributed Tracing", "SLO Monitoring",
-];
-
 // was `aiTools` — you listed no AI tools, so this now holds data & methodologies
 export const dataAndMethodologies: string[] = [
   "PostgreSQL", "MongoDB", "DynamoDB", "ETL Validation",
@@ -57,7 +52,6 @@ export const dataAndMethodologies: string[] = [
 
 export const cloudTools: string[] = [
   ...infraAndCI,
-  ...observability,
 ];
 
 export const aiTools: string[] = dataAndMethodologies;
