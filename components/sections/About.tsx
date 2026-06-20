@@ -93,7 +93,7 @@ export function About() {
                 clear defect signals, and automation that developers actually trust.
               </motion.p>
               <motion.p variants={ANIMATION_VARIANTS.fadeInUp} className="text-base leading-relaxed text-zinc-400">
-                Worked with <span className="text-white font-medium">SilverXis, ServiceLink, and Accenture</span> — hands-on across
+                Worked with <span className="text-white font-medium">SilverXis, Cardinal Health, ServiceLink, Vantage Bank, and Accenture</span> — hands-on across
                 Playwright, Selenium, Pytest, Appium, Postman, REST Assured, JMeter, AWS, Docker,
                 Jenkins, and modern CI/CD quality gates.
               </motion.p>

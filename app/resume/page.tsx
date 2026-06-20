@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Download, MapPin, Mail, Linkedin, Github, BookOpen, GraduationCap, Award, ExternalLink } from "lucide-react";
+import { ArrowLeft, Download, MapPin, Mail, Phone, Linkedin, Github, BookOpen, GraduationCap, Award, ExternalLink } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { experiences } from "@/data/experience";
 import { projects } from "@/data/projects";
@@ -13,7 +13,7 @@ const education = [
     degree: "Master of Science — Information Technology & Management",
     school: "The University of Texas at Dallas",
     location: "Dallas, TX",
-    year: "2022",
+    year: "Jun 2022",
     color: "text-violet-400",
     bg: "bg-violet-500/10",
     border: "border-violet-500/20",
@@ -22,7 +22,7 @@ const education = [
     degree: "Bachelor of Engineering — Electronics & Instrumentation",
     school: "Visvesvaraya Technological University",
     location: "Bangalore, IN",
-    year: "2015",
+    year: "Jun 2015",
     color: "text-sky-400",
     bg: "bg-sky-500/10",
     border: "border-sky-500/20",
@@ -31,11 +31,21 @@ const education = [
 
 const recognition = [
   {
+    title: "ISTQB Foundation Level Certified",
+    issuer: "International Software Testing Qualifications Board",
+    year: "Certification",
+    description:
+      "Certified in foundational software testing principles, test design techniques, lifecycle models, and defect management practices.",
+    color: "text-emerald-400",
+    bg: "bg-emerald-500/10",
+    border: "border-emerald-500/20",
+  },
+  {
     title: "Excellence in Software Testing Award",
     issuer: "Accenture",
     year: "Q1 2019",
     description:
-      "Recognised for building and scaling a Cucumber/Gherkin BDD framework that automated 1,000+ regression test cases for a Barclays payment platform, saving 148 engineer-hours per monthly release cycle.",
+      "Recognized for contributing to a 0-defect release and building scalable Cucumber/Gherkin automation across a Barclays payment platform.",
     color: "text-amber-400",
     bg: "bg-amber-500/10",
     border: "border-amber-500/20",
@@ -93,6 +103,9 @@ export default function ResumePage() {
             <span className="flex items-center gap-1.5"><MapPin size={12} />{siteConfig.location}</span>
             <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-1.5 transition-colors hover:text-zinc-300">
               <Mail size={12} />{siteConfig.email}
+            </a>
+            <a href={`tel:${siteConfig.phone.replace(/[^+\d]/g, "")}`} className="flex items-center gap-1.5 transition-colors hover:text-zinc-300">
+              <Phone size={12} />{siteConfig.phone}
             </a>
             <a href={siteConfig.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[#0A66C2] hover:text-[#0A66C2]/80">
               <Linkedin size={12} />LinkedIn

@@ -57,11 +57,11 @@ export const experiences: Experience[] = [
   },
   {
     id: "silverxis-previous",
-    company: "SilverXis Inc Intern",
+    company: "SilverXis Inc (Intern Client: Vantage Bank)",
     companyInitial: "S",
     role: "Test Engineer",
     period: "Jun 2021 – Dec 2021",
-    location: "Irving, TX",
+    location: "San Antonio, TX",
     description:
       "Developed foundational automation frameworks and performance testing systems for enterprise QA modernization initiatives.",
     achievements: [
@@ -90,10 +90,10 @@ export const experiences: Experience[] = [
     description:
       "Worked on large-scale Barclays banking and payments systems, building BDD automation, data validation, regression, UAT, and defect management practices across release cycles.",
     achievements: [
-      "Built and scaled a Cucumber/Gherkin BDD framework that automated 1,000+ regression test cases across a Barclays payment platform; saved 148 engineer-hours per monthly release cycle and shortened sprint testing lifecycle by 2 days, recognized with Accenture Excellence in Software Testing Award (Q1 2019).",
+      "As Sr. Test Engineering Analyst, built and scaled a Cucumber/Gherkin BDD framework that automated 1,000+ regression test cases across a Barclays payment platform; saved 148 engineer-hours per monthly release cycle and shortened sprint testing lifecycle by 2 days, recognized with Accenture Excellence in Software Testing Award (Q1 2019).",
       "Optimized 350+ complex SQL queries for automated data validation against Mainframe DB2 and SQL Server, converting entirely manual data verification workflows into scheduled automated pipelines.",
       "Drove regression and UAT coverage for 4 consecutive on-schedule Barclays payment releases, validating critical transaction flows and maintaining a defect escape rate low enough to eliminate post-release rollbacks.",
-      "Executed manual and exploratory testing across functional, regression, and UAT cycles for a banking application, uncovering critical application issues through detailed validation and contributing to a 95% on time release rate.",
+      "As Associate Test Analyst, executed manual and exploratory testing across functional, regression, and UAT cycles for a banking application, uncovering critical application issues through detailed validation and contributing to a 95% on time release rate.",
       "Identified and reported 60+ defects across agile sprints in HP QC by documenting clear reproduction steps, environment details, and severity levels, resulting in faster issue resolution and reduced developer follow ups."
     ],
     techStack: [
