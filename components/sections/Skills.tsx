@@ -7,9 +7,9 @@ import { ANIMATION_VARIANTS } from "@/lib/utils";
 
 const impactStats = [
   { value: "14+",       label: "Tools & Frameworks",  valueColor: "text-violet-300", border: "border-violet-500/20", hoverBorder: "hover:border-violet-400/50", glow: "hover:shadow-[0_0_30px_-8px_rgba(139,92,246,0.4)]" },
-  { value: "450+",      label: "Automated Scenarios", valueColor: "text-sky-300",    border: "border-sky-500/20",    hoverBorder: "hover:border-sky-400/50",    glow: "hover:shadow-[0_0_30px_-8px_rgba(14,165,233,0.4)]" },
+  { value: "500+",      label: "Regression Cases",    valueColor: "text-sky-300",    border: "border-sky-500/20",    hoverBorder: "hover:border-sky-400/50",    glow: "hover:shadow-[0_0_30px_-8px_rgba(14,165,233,0.4)]" },
   { value: "3.5h→<1h", label: "Regression Runtime",  valueColor: "text-emerald-300",border: "border-emerald-500/20",hoverBorder: "hover:border-emerald-400/50",glow: "hover:shadow-[0_0_30px_-8px_rgba(16,185,129,0.4)]" },
-  { value: "18%→<5%",  label: "Flaky Test Rate",      valueColor: "text-amber-300",  border: "border-amber-500/20",  hoverBorder: "hover:border-amber-400/50",  glow: "hover:shadow-[0_0_30px_-8px_rgba(245,158,11,0.4)]" },
+  { value: "12%→<4%",  label: "Flaky Test Rate",      valueColor: "text-amber-300",  border: "border-amber-500/20",  hoverBorder: "hover:border-amber-400/50",  glow: "hover:shadow-[0_0_30px_-8px_rgba(245,158,11,0.4)]" },
 ];
 
 export function Skills() {

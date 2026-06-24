@@ -4,7 +4,7 @@ export const siteConfig = {
   title: "SDET",
   tagline: "Building quality systems that ship at scale",
   description:
-    "SDET with 7+ years in fintech, enterprise SaaS, and data platforms. Skilled in building Playwright and TypeScript automation frameworks, UI and API test suites, CI/CD quality gates, and AI-powered QA solutions.",
+    "SDET with 7+ years of experience in fintech, enterprise SaaS, and data platforms. Skilled in building and maintaining Playwright and TypeScript automation frameworks, developing UI and API test suites, and integrating quality gates into CI/CD pipelines using GitHub Actions and Docker.",
   email: "rajput.lakshit0905@gmail.com",
   phone: "+1 (469) 514-3478",
   linkedin: "https://www.linkedin.com/in/lakshitrajput/",
@@ -18,7 +18,7 @@ export const siteConfig = {
   roles: ["Senior SDET", "QE Architect", "Automation Engineer", "Quality Engineer"],
   stats: [
     { value: "7", suffix: "+", label: "Years in SDET" },
-    { value: "450", suffix: "+", label: "UI/API scenarios" },
+    { value: "500", suffix: "+", label: "Regression cases" },
     { value: "200", suffix: "+", label: "Endpoints tested" },
     { value: "<1", suffix: "hr", label: "Regression runtime" },
   ],

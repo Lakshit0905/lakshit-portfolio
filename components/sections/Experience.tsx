@@ -76,7 +76,7 @@ type Metric = { icon: IconComp; value: string; label: string; color: string; bg:
 
 const roleMetrics: Record<string, Metric[]> = {
   "silverxis-current": [
-    { icon: Zap,      value: "450+",     label: "Automated Scenarios", color: "text-violet-300", bg: "bg-violet-500/10", border: "border-violet-500/20" },
+    { icon: Zap,      value: "500+",     label: "Regression Cases",    color: "text-violet-300", bg: "bg-violet-500/10", border: "border-violet-500/20" },
     { icon: Clock,    value: "3.5h→<1h", label: "Regression Runtime",  color: "text-sky-300",    bg: "bg-sky-500/10",    border: "border-sky-500/20" },
     { icon: Target,   value: "12%→<4%",  label: "Flaky Test Rate",     color: "text-emerald-300",bg: "bg-emerald-500/10",border: "border-emerald-500/20" },
     { icon: Link2,    value: "200+",     label: "APIs Tested",         color: "text-amber-300",  bg: "bg-amber-500/10",  border: "border-amber-500/20" },
@@ -94,9 +94,9 @@ const roleMetrics: Record<string, Metric[]> = {
     { icon: Target,   value: "5,000", label: "Concurrent Users Tested", color: "text-amber-300", bg: "bg-amber-500/10", border: "border-amber-500/20" },
   ],
   "accenture": [
-    { icon: Zap,      value: "1,000+", label: "Test Cases Automated",  color: "text-emerald-300",bg: "bg-emerald-500/10",border: "border-emerald-500/20" },
-    { icon: Clock,    value: "148h",   label: "Saved / Release Cycle", color: "text-sky-300",    bg: "bg-sky-500/10",    border: "border-sky-500/20" },
-    { icon: Database, value: "350+",   label: "SQL Queries Automated", color: "text-violet-300", bg: "bg-violet-500/10", border: "border-violet-500/20" },
+    { icon: Zap,      value: "500+",   label: "Test Cases Automated",  color: "text-emerald-300",bg: "bg-emerald-500/10",border: "border-emerald-500/20" },
+    { icon: Clock,    value: "2 days", label: "Testing Cycle Reduced", color: "text-sky-300",    bg: "bg-sky-500/10",    border: "border-sky-500/20" },
+    { icon: Database, value: "50+",    label: "SQL Queries Automated", color: "text-violet-300", bg: "bg-violet-500/10", border: "border-violet-500/20" },
     { icon: Shield,   value: "95%",    label: "On-Time Release Rate",  color: "text-amber-300",  bg: "bg-amber-500/10",  border: "border-amber-500/20" },
   ],
 };

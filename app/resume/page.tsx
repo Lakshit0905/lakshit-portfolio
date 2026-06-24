@@ -10,7 +10,7 @@ import { TechChip } from "@/components/ui/TechChip";
 
 const education = [
   {
-    degree: "Master of Science — Information Technology & Management",
+    degree: "MS, Information Technology & Management",
     school: "The University of Texas at Dallas",
     location: "Dallas, TX",
     year: "Jun 2022",
@@ -19,7 +19,7 @@ const education = [
     border: "border-violet-500/20",
   },
   {
-    degree: "Bachelor of Engineering — Electronics & Instrumentation",
+    degree: "BE, Electronics & Instrumentation Engineering",
     school: "Visvesvaraya Technological University",
     location: "Bangalore, IN",
     year: "Jun 2015",
@@ -45,7 +45,7 @@ const recognition = [
     issuer: "Accenture",
     year: "Q1 2019",
     description:
-      "Recognized for contributing to a 0-defect release and building scalable Cucumber/Gherkin automation across a Barclays payment platform.",
+      "Recognized for no major production defects and automation impact across a Barclays payment platform.",
     color: "text-amber-400",
     bg: "bg-amber-500/10",
     border: "border-amber-500/20",
@@ -55,7 +55,7 @@ const recognition = [
     issuer: "Barclays / Accenture",
     year: "Jul 2017 · ×2 across tenure",
     description:
-      "Awarded twice during the Barclays engagement for outstanding contribution to test automation, accelerating sprint delivery and reducing manual regression effort through scalable framework improvements.",
+      "Awarded twice across tenure for automation impact during the Barclays engagement.",
     color: "text-violet-400",
     bg: "bg-violet-500/10",
     border: "border-violet-500/20",

@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: "llm-regression-testing-framework",
     title: "LLM Regression Testing Framework",
     description:
-      "Designed an evaluation harness using pytest and scoring functions to detect prompt regressions, output drift, and quality degradation across model versions for internal GenAI feature releases.",
+      "Built a pytest-based evaluation harness to compare LLM outputs across prompt and model changes, using scoring functions to detect regressions, output drift, and quality degradation.",
     techStack: ["Python", "pytest", "LLM Evaluation", "Scoring Functions", "GenAI"],
     githubUrl: "https://github.com/Lakshit0905/llm-regression-framework",
   },
@@ -13,7 +13,7 @@ export const projects: Project[] = [
     id: "autonomous-flakiness-detector",
     title: "Autonomous Flakiness Detector",
     description:
-      "Engineered a Python-based CI analytics tool that analyzes test history, applies statistical anomaly detection, and auto-quarantines flaky tests with Slack alerting, reducing CI flakiness noise by 87%.",
+      "Built a Python-based CI analytics tool to analyze historical test failures, identify recurring flaky patterns, quarantine unstable tests, and send Slack alerts to reduce repeated CI investigation effort.",
     techStack: ["Python", "CI/CD", "Statistical Analysis", "Slack API", "GitHub Actions"],
     githubUrl: "https://github.com/Lakshit0905/autonomous-flakiness-detector",
   },
