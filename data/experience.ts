@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
     achievements: [
       "Architected a scalable Playwright + TypeScript automation framework: Automated UI and API regression scenarios for order management, inventory, and pharmacy distribution workflows, reducing flaky failures from nearly 12% to below 4% through stable locator strategies, retry-aware reporting, isolated test data, and Allure-based failure tracking.",
       "Improved CI/CD test execution: Integrated Dockerized Playwright runs into GitHub Actions with parallel execution, cutting regression runtime from 3.5 hours to under 1 hour and giving teams faster feedback during sprint releases.",
-      "Built API automation coverage for order and inventory services: Validated 200+ endpoints across 12 microservices using Playwright API testing, Pact contract tests, and SQL checks, helping reduce late-cycle backend defects by 25-30%.",
+      "Built API automation coverage for order and inventory services: Validated 200+ endpoints across 12 microservices using Playwright API testing, Pact contract tests, and SQL checks, helping reduce late-cycle backend defects by 25–30%.",
       "Stabilized test environments: Ran scheduled Playwright suites on AWS EC2 environments with seeded supply chain test data, creating a reliable baseline for sprint testing and reducing environment-related false failures by 10%.",
       "Streamlined defect triage: Built a TypeScript utility that captured failed test details, logs, and screenshots, auto-created Jira tickets, and routed issues to code owners, reducing reporting time from 20 minutes to under 3 minutes."
     ],
@@ -90,11 +90,11 @@ export const experiences: Experience[] = [
     description:
       "Worked on large-scale Barclays banking and payments systems, building BDD automation, data validation, regression, UAT, and defect management practices across release cycles.",
     achievements: [
-      "As Sr. Test Engineering Analyst, built and scaled a Cucumber/Gherkin BDD framework that automated 500+ regression test cases across a Barclays payment platform, reducing monthly release testing effort and shortening sprint testing cycles by 2 days.",
+      "Built and scaled a Cucumber/Gherkin BDD framework that automated 500+ regression test cases across a Barclays payment platform, reducing monthly release testing effort and shortening sprint testing cycles by 2 days.",
       "Optimized 50+ complex SQL queries across Mainframe DB2 and SQL Server to automate data validation, transforming manual verification workflows into scheduled pipelines and improving regression data-check consistency.",
       "Led regression and UAT validation for 4 consecutive Barclays payment releases, covering critical transaction flows, defect fixes, and release readiness checks, which supported on-schedule production deployments with minimal post defects.",
-      "As Associate Test Analyst, executed manual and exploratory testing across functional, regression, and UAT cycles for a banking application, uncovering critical application issues through detailed validation and contributing to a 95% on time release rate.",
-      "Identified and reported 60+ defects across agile sprints in HP QC by documenting clear reproduction steps, environment details, and severity levels, resulting in faster issue resolution and reduced developer follow ups."
+      "Executed manual and exploratory testing across functional, regression, and UAT cycles for a banking application, uncovering critical issues through detailed validation and contributing to a 95% on-time release rate.",
+      "Identified and reported 60+ defects across Agile sprints in HP QC by documenting clear reproduction steps, environment details, and severity levels, resulting in faster issue resolution and reduced developer follow-ups."
     ],
     techStack: [
       "Cucumber",
