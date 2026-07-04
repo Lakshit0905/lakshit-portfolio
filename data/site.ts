@@ -13,7 +13,7 @@ export const siteConfig = {
   location: "Dallas, Texas, USA",
   availability: "Open to Senior SDET · Staff QE · QE Architect roles",
   url: "https://lakshitrajput.com/",
-  photoUrl: "/laks.JPEG",
+  photoUrl: "/pic.jpeg",
   resumeUrl: "/resume.pdf",
   roles: ["Senior SDET", "QE Architect", "Automation Engineer", "Quality Engineer"],
   stats: [
