@@ -135,7 +135,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.96, y: 24 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto w-full max-w-sm lg:max-w-none"
+          className="mx-auto w-full max-w-[21rem] lg:max-w-sm"
         >
           {/* Availability badge */}
           <div className="mb-4 flex justify-center">
@@ -149,12 +149,12 @@ export function Hero() {
               </span>
             </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 bg-white/3 shadow-2xl shadow-indigo-950/40">
+          <div className="relative aspect-[9/16] overflow-hidden rounded-2xl border border-white/10 bg-white/3 shadow-2xl shadow-indigo-950/40">
             {siteConfig.photoUrl ? (
               <img
                 src={siteConfig.photoUrl}
                 alt={`${siteConfig.name} portrait`}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-center"
               />
             ) : (
               <div className="flex h-full items-center justify-center bg-gradient-to-br from-indigo-500/20 via-zinc-900 to-cyan-500/10">
